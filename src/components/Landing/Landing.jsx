@@ -8,8 +8,6 @@ const Landing = () => {
   return (
     <div>
       <NavBar/>
-      <Presentation/>
-      <SobreMi/>
     </div>
   )
 }
