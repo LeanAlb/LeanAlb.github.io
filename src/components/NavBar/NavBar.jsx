@@ -9,7 +9,7 @@ const NavBar = () => {
       <nav className={style.navigator}>
         <span className={style.logo}>Leandro</span>
         <ul className={style.elementos}>
-          <li><Link to='#inicio'>Inicio</Link></li>
+          <li><Link to='#presentation'>Inicio</Link></li>
           <li><Link to='#sobreMi'>Sobre Mi</Link></li>
           <li><Link to='#skills'>Skills</Link></li>
           <li><Link to='#curriculum'>Curriculum</Link></li>

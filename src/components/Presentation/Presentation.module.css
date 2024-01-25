@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url('../Landing/background-img.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+  
+  
+  .card {
+    display: flex;
+    background-color: #242424;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    border-radius: 40px;
+    padding: 2%;
+  }
+  
+  .foto {
+    height: 250px;
+    width: 200px;
+    border-radius: 50%;
+    border: solid 5px;
+    border-color: black;
+    box-shadow: 0 0 0 5px #1CB698;
+  }
+  
+  h1, h2 {
+    margin: 10px 0;
+  }
+  
