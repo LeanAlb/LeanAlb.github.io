@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .logo,
+  .logo:visited,
+  .logo:hover,
+  .logo:active {
+    color: #1CB698 !important;
+    text-decoration: none !important;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    outline: none;
+  }
+  
+  .navigator {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .elementos {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 12px;
+    justify-content: flex-end;
+  }
+  
+  .elementos a {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: background-color 0.25s;
+  }
+  
+  .elementos a:hover {
+    background-color: #1CB698;
+  }
+  
