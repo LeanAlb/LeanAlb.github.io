@@ -1,6 +1,7 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import Landing from './components/Landing/Landing'
+import SobreMi from './components/SobreMi/SobreMi'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Routes>
         <Route path='/' element={<Landing/>}></Route>
+        <Route path='/sobreMi' element={<SobreMi/>}></Route>
       </Routes>
     </div>
   )
