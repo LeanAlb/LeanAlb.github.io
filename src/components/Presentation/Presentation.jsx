@@ -10,6 +10,8 @@ const Presentation = () => {
         <img src={Leandro} alt="foto Leandro" className={style.foto} />
         <h1>Leandro Albrieu</h1>
         <h2>FullStack developer</h2>
+        <h3>JavaScript | React | Redux | Express | PostgreSQL</h3>
+        <h4>HTML | CSS</h4>
         <SocialMedia/>
       </div>
     </div>

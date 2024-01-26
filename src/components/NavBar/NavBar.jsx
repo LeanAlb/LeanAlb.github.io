@@ -3,8 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import style from './NavBar.module.css';
 import Presentation from '../Presentation/Presentation';
 import SobreMi from '../SobreMi/SobreMi';
-import Skills from '../Skills/Skills';
-import SocialMedia from '../SocialMedia/SocialMedia';
+import Portfolio from '../Portfolio/Portfolio';
 
 const NavBar = () => {
   return (
@@ -15,7 +14,6 @@ const NavBar = () => {
           <ul className={style.elementos}>
             <li><ScrollLink to="presentation" smooth={true} duration={500}>Inicio</ScrollLink></li>
             <li><ScrollLink to="sobreMi" smooth={true} duration={500}>Sobre Mi</ScrollLink></li>
-            <li><ScrollLink to="skills" smooth={true} duration={500}>Skills</ScrollLink></li>
             <li><ScrollLink to="portfolio" smooth={true} duration={500}>Portfolio</ScrollLink></li>
             <li><ScrollLink to="contacto" smooth={true} duration={500}>Contacto</ScrollLink></li>
           </ul>
@@ -27,8 +25,8 @@ const NavBar = () => {
       <section id='sobreMi'>
         <SobreMi />
       </section>
-      <section id='skills'>
-        <Skills />
+      <section id='portfolio'>
+        <Portfolio />
       </section>
       
     </div>
