@@ -24,8 +24,43 @@
     margin: 0;
     line-height: 1.5;
   }
+
+  .button {
+    color: #F5BB00;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #F5BB00;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+  }
   
-  .button{
+  .button:hover {
+    color: black;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #F5BB00;
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .button:hover::before {
+    width: 160%;
+  }
+  
+  /* .button{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0.6em 1.2em;
@@ -37,6 +72,6 @@
   }
 
   .button:hover{
-    background-color: #1CB698;
-  }
+    background-color: #F5BB00; */
+  
   

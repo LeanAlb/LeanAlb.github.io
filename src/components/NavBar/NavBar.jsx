@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import style from './NavBar.module.css';
-import SobreMi from '../SobreMi/SobreMi';
 import Presentation from '../Presentation/Presentation';
+import SobreMi from '../SobreMi/SobreMi';
+import Skills from '../Skills/Skills';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const NavBar = () => {
   return (
@@ -24,6 +26,9 @@ const NavBar = () => {
       </section>
       <section id='sobreMi'>
         <SobreMi />
+      </section>
+      <section id='skills'>
+        <Skills />
       </section>
       
     </div>

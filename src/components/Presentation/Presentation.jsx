@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Presentation.module.css';
 import Leandro from './Leandro-Perfil.png';
+import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Presentation = () => {
   return (
@@ -9,6 +10,7 @@ const Presentation = () => {
         <img src={Leandro} alt="foto Leandro" className={style.foto} />
         <h1>Leandro Albrieu</h1>
         <h2>FullStack developer</h2>
+        <SocialMedia/>
       </div>
     </div>
   );

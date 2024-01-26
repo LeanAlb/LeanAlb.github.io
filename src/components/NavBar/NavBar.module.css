@@ -6,13 +6,14 @@
     height: fit-content;
     margin-bottom: 20px;
     background-color: #1a1a1a;
+    z-index: 2;
   }
   
   .logo,
   .logo:visited,
   .logo:hover,
   .logo:active {
-    color: #1CB698 !important;
+    color: #F5BB00 !important;
     text-decoration: none !important;
     border: none;
     padding: 0;
@@ -46,6 +47,7 @@
   }
   
   .elementos a:hover {
-    background-color: #1CB698;
+    color: black;
+    background-color: #F5BB00;
   }
   
