@@ -4,6 +4,7 @@ import style from './NavBar.module.css';
 import Presentation from '../Presentation/Presentation';
 import SobreMi from '../SobreMi/SobreMi';
 import Portfolio from '../Portfolio/Portfolio';
+import  Contacto from '../Contacto/Contacto'
 
 const NavBar = () => {
   return (
@@ -27,6 +28,9 @@ const NavBar = () => {
       </section>
       <section id='portfolio'>
         <Portfolio />
+      </section>
+      <section id='contacto'>
+        <Contacto />
       </section>
       
     </div>

@@ -7,6 +7,7 @@ const Portfolio = () => {
     <div className={style.container}>
       <h2>Portfolio</h2>
       <p>Este portfolio fue creado con:</p>
+      <p>Pokemon project:</p>
       <Carousel/>
     </div>
   );
