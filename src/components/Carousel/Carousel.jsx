@@ -1,47 +1,57 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import style from './Carousel.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { data } from '../../assets/data';
 
 const Carousel = () => {
+    const listRef=useRef();
+    const [currentIndex, setCurrentIndex]=useState(0);
+    useEffect(()=>{
+        const listNode=listRef.current;
+        const imgNode=listNode.querySelectorAll("li>img")[currentIndex];
+        if(imgNode){
+            imgNode.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    },[currentIndex])
+
+    const scrollToImage=(direction)=>{
+        if(direction==='prev'){
+            setCurrentIndex(curr=>{
+                const isFirstSlide=currentIndex==0;
+                return isFirstSlide? 0: curr-1;
+            })
+        } else {
+            const isLastSlide=currentIndex === data.length-1;
+            if(!isLastSlide){
+                setCurrentIndex(curr=>curr+1);
+            }
+        }
+    }
+
+    
+
+
+
   return (
-    <div className={style.carousel}>
-            <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner">
-            <div className="carousel-item active">
-            <img src="../../../img/Landing-Pokemon.png" className="d-block w-100" alt="Landing-Pokemon"/>
-            <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+    <div className={style.mainContainer}>
+        <div className={style.sliderContainer}>
+            <div className={style.leftArrow} onClick={()=>scrollToImage('prev')}>&#10092;</div>
+            <div className={style.rightArrow} onClick={()=>scrollToImage('next')}>&#10093;</div>
+
+            <div className={style.containerImages}>
+                <ul ref={listRef}>
+                    {
+                        data.map((item)=>{
+                            return <li key={item.id}>
+                                <img src={item.imgUrl} width={500} height={280} />
+                            </li>
+                        })
+                    }
+                </ul>
             </div>
-            </div>
-            <div className="carousel-item">
-            <img src="../../../img/homePage-pokemon.png" className="d-block w-100" alt="home"/>
-            <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-            </div>
-            <div className="carousel-item">
-            <img src="../../../img/Detail-pokemon.png" className="d-block w-100" alt="detail"/>
-            <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-            </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-        </button>
+            
         </div>
     </div>
   )
